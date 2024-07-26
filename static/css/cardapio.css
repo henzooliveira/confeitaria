@@ -1,0 +1,236 @@
+/* Reseta margens e preenchimentos padrão, e define box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to right, #f4f4f4, #e0e0e0); /* Gradiente de fundo */
+}
+
+/* Estilo do container centralizado */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra no cabeçalho */
+    border-bottom: 5px solid #e55d50; /* Borda inferior elegante */
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Estilo de navegação */
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    transform: scale(1.1); /* Efeito de zoom suave */
+}
+
+/* Estilo da seção de menu */
+.menu {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px; /* Bordas arredondadas no contêiner */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Sombra sutil */
+    margin-top: -80px; /* Para sobrepor a seção hero, se aplicável */
+    position: relative;
+    z-index: 1;
+}
+
+.menu h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff6f61;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra sutil no texto */
+}
+
+.menu p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33% - 40px); /* Ajuste para três itens por linha */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.menu-item p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.menu-item span {
+    font-size: 1.2em;
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra mais pronunciada */
+}
+
+/* Estilo do botão de voltar */
+.back-button-section {
+    background: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Borda inferior sutil */
+}
+
+.back-button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra mais pronunciada */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #e55d50;
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    border-top: 5px solid #ff6f61; /* Borda superior elegante */
+}
+
+/* Consultas de mídia para responsividade */
+
+/* Dispositivos móveis e tablets pequenos */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .menu h2 {
+        font-size: 2em;
+    }
+
+    .menu p {
+        font-size: 1.1em;
+        margin-bottom: 20px; /* Redução da margem para economizar espaço */
+    }
+
+    .menu-item {
+        width: calc(50% - 40px); /* Ajuste para dois itens por linha */
+    }
+
+    .back-button {
+        padding: 8px 15px; /* Ajuste do tamanho do botão de voltar */
+    }
+}
+
+/* Dispositivos muito pequenos (ex. smartphones em modo retrato) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .menu h2 {
+        font-size: 1.5em;
+    }
+
+    .menu p {
+        font-size: 1em;
+        margin-bottom: 10px; /* Redução da margem para economizar espaço */
+    }
+
+    .menu-items {
+        gap: 10px; /* Redução do espaçamento entre os itens */
+    }
+
+    .menu-item {
+        width: calc(100% - 20px); /* Um item por linha em dispositivos muito pequenos */
+    }
+
+    .menu-item h3 {
+        font-size: 1.3em;
+        margin: 10px 0; /* Ajustando a margem do título do item do menu */
+    }
+
+    .menu-item p {
+        font-size: 0.9em;
+        margin-bottom: 5px; /* Redução da margem inferior do texto do item do menu */
+    }
+
+    .back-button {
+        padding: 8px 15px; /* Ajuste do tamanho do botão de voltar */
+    }
+}
